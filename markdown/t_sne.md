@@ -139,3 +139,10 @@ In the first setp, you should generate CNN feature and save it to your disc.
 
 ![t_sne_example](http://ww1.sinaimg.cn/large/005CmS3Mgy1glul5k2nomj31hc140jxl.jpg)
 
+## More...
+
+For more information about ```sklearn t-SNE```, please refer to:
+
+- [sklearn.manifold.TSNE](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html#sklearn.manifold.TSNE)
+- [How to use t-SNE Effectively](http://distill.pub/2016/misread-tsne)
+
