@@ -4,6 +4,8 @@
 
 This script only contains a 2D t-SNE visualization
 
+The source code located in ```code/t_sne.py```
+
 ## How to do this
 
 ### A. Generate and Save CNN Feature
