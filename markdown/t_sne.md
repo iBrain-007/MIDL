@@ -42,10 +42,10 @@ In the first setp, you should generate CNN feature and save it to your disc.
        		 # remove the last FC layers
         	self.features = nn.Sequential(*list(model.children())[:-2])
     
-    	def forward(self, x):
-        	x = self.features(x)
-        	x = torch.flatten(x, 1)
-        	return x
+    def forward(self, x):
+        x = self.features(x)
+        x = torch.flatten(x, 1)
+        return x
     ```
 
 
@@ -135,5 +135,5 @@ In the first setp, you should generate CNN feature and save it to your disc.
 
 ## Visual Examples
 
-![t-SNE Example](imgs/t_sne_example.jpg)
+![t_sne_example](http://ww1.sinaimg.cn/large/005CmS3Mgy1glul5k2nomj31hc140jxl.jpg)
 
