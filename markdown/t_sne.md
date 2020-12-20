@@ -28,25 +28,24 @@ In the first setp, you should generate CNN feature and save it to your disc.
 
 - Define a feature extracter
 
+    ```python
     class FeatureExtracter(nn.Module):
         """
         Extract the last fc layer features of the FusionBiGradNet
         In this section, we run the model without the classifier
         and to save the output features of the network
-        """
-
-    ```python
-    def __init__(self, model):
-        super(FeatureExtracter, self).__init__()
-        if isinstance(model, torch.nn.DataParallel):
-            model = model.module
-        # remove the last FC layers
-        self.features = nn.Sequential(*list(model.children())[:-2])
+    """
+        def __init__(self, model):
+        	super(FeatureExtracter, self).__init__()
+        	if isinstance(model, torch.nn.DataParallel):
+            	model = model.module
+       		 # remove the last FC layers
+        	self.features = nn.Sequential(*list(model.children())[:-2])
     
-    def forward(self, x):
-        x = self.features(x)
-        x = torch.flatten(x, 1)
-        return x
+    	def forward(self, x):
+        	x = self.features(x)
+        	x = torch.flatten(x, 1)
+        	return x
     ```
 
 
